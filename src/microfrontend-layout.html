@@ -1,0 +1,16 @@
+<single-spa-router base="/" disableWarnings>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+<application name="@udistrital/core-mf" props="environment"></application>
+<route path="formulacion">
+    <application name="@udistrital/planeacion-formulacion-mf"></application>
+</route>
+<route path="pendientes">
+    <application name="@udistrital/planeacion-pendientes-mf"></application>
+</route>
+</single-spa-router>
