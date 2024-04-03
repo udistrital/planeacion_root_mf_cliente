@@ -7,7 +7,17 @@
   -->
 
 <application name="@udistrital/core-mf" props="environment"></application>
-<route path="/">
+<route path="formulacion">
+  <application name="@udistrital/planeacion-formulacion-mf"></application>
+</route>
+<route path="seguimiento">
+  <application name="@udistrital/planeacion-seguimiento-mf"></application>
+</route>
+<route path="utilidades">
   <application name="@udistrital/planeacion-utilidades-mf"></application>
 </route>
+<route path="construccion">
+  <application name="@udistrital/planeacion-construccion-mf"></application>
+</route>
+
 </single-spa-router>
