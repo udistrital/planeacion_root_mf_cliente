@@ -7,15 +7,13 @@
   -->
 
   <application name="@udistrital/core-mf" props="environment"></application>
-  <route path="pages">
-    <route path="formulacion">
-      <application name="@udistrital/planeacion-formulacion-mf"></application>
-    </route>
-    <route path="seguimiento">
-      <application name="@udistrital/planeacion-seguimiento-mf"></application>
-    </route>
-    <route path="pendientes">
-      <application name="@udistrital/planeacion-pendientes-mf"></application>
-    </route>
+  <route path="formulacion">
+    <application name="@udistrital/planeacion-formulacion-mf"></application>
+  </route>
+  <route path="seguimiento">
+    <application name="@udistrital/planeacion-seguimiento-mf"></application>
+  </route>
+  <route path="pendientes">
+    <application name="@udistrital/planeacion-pendientes-mf"></application>
   </route>
 </single-spa-router>
