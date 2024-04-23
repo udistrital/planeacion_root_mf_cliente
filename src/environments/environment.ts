@@ -12,10 +12,10 @@ export const environment = {
       CLIENTE_ID: "e36v1MPQk2jbz9KM4SmKhk8Cyw0a",
       RESPONSE_TYPE: "id_token token",
       SCOPE: "openid email",
-      REDIRECT_URL: "http://localhost:4200/",
+      REDIRECT_URL: "https://pruebaspsisgplanmf.portaloas.udistrital.edu.co",
       SIGN_OUT_URL:
         "https://autenticacion.portaloas.udistrital.edu.co/oidc/logout",
-      SIGN_OUT_REDIRECT_URL: "http://localhost:4200/",
+      SIGN_OUT_REDIRECT_URL: "https://pruebaspsisgplanmf.portaloas.udistrital.edu.co",
       AUTENTICACION_MID:
         "https://autenticacion.portaloas.udistrital.edu.co/apioas/autenticacion_mid/v1/token/userRol",
     },
