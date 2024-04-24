@@ -10,6 +10,7 @@
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
     "build:types": "tsc",
+    "build:prod": "webpack --progress --mode production --no-devtool --env isProd",
     "build:test": "webpack --progress --mode production --no-devtool --env isDev"
   },
   "devDependencies": {
