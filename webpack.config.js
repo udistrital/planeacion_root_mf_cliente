@@ -1,6 +1,7 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-ts");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { DefinePlugin } = require("webpack");
 
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "udistrital";
@@ -20,8 +21,15 @@ module.exports = (webpackConfigEnv, argv) => {
         template: "src/index.ejs",
         templateParameters: {
           isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
+          isDev: webpackConfigEnv && webpackConfigEnv.isDev,
+          isProd: webpackConfigEnv && webpackConfigEnv.isProd,
           orgName,
         },
+      }),
+      new DefinePlugin({
+        isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
+        isDev: webpackConfigEnv && webpackConfigEnv.isDev,
+        isProd: webpackConfigEnv && webpackConfigEnv.isProd,
       }),
     ],
   });
