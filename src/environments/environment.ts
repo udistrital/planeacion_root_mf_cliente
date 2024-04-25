@@ -9,21 +9,21 @@ export const environment = {
     TOKEN: {
       AUTORIZATION_URL:
         "https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize",
-      CLIENTE_ID: "e36v1MPQk2jbz9KM4SmKhk8Cyw0a",
+      CLIENTE_ID: "vnDhtcNeM9lEWWFd4oNvrpZxqhMa",
       RESPONSE_TYPE: "id_token token",
       SCOPE: "openid email",
-      REDIRECT_URL: "http://localhost:4200/",
+      REDIRECT_URL: "https://pruebaspsisgplanmf.portaloas.udistrital.edu.co",
       SIGN_OUT_URL: "https://autenticacion.portaloas.udistrital.edu.co/oidc/logout",
-      SIGN_OUT_REDIRECT_URL: "http://localhost:4200/",
+      SIGN_OUT_REDIRECT_URL: "https://pruebaspsisgplanmf.portaloas.udistrital.edu.co",
       AUTENTICACION_MID: "https://autenticacion.portaloas.udistrital.edu.co/apioas/autenticacion_mid/v1/token/userRol",
     },
     parcels: {
-      "@udistrital/root-config": "//localhost:4200/udistrital-root-config.js",
-      "@udistrital/core-mf": "//localhost:4201/main.js",
-      "@udistrital/planeacion-formulacion-mf": "//localhost:4202/main.js",
-      "@udistrital/planeacion-seguimiento-mf": "//localhost:4203/main.js",
-      "@udistrital/planeacion-utilidades-mf": "//localhost:4204/main.js",
-      "@udistrital/planeacion-construccion-mf": "//localhost:4205/main.js",
-      "@udistrital/planeacion-pendientes-mf": "//localhost:4206/main.js",
+      "@udistrital/root-config": "https://pruebaspsisgplanmf.portaloas.udistrital.edu.co/udistrital-root-config.js",
+      "@udistrital/core-mf": "https://pruebascoreclientes.portaloas.udistrital.edu.co/main.js",
+      "@udistrital/planeacion-formulacion-mf": "",
+      "@udistrital/planeacion-seguimiento-mf": "",
+      "@udistrital/planeacion-utilidades-mf": "https://pruebaspsisgplanutilidadesmf.portaloas.udistrital.edu.co/main.js",
+      "@udistrital/planeacion-construccion-mf": "",
+      "@udistrital/planeacion-pendientes-mf": "",
     }
   };
