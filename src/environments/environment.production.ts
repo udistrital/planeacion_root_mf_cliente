@@ -9,7 +9,7 @@ export const environment = {
     TOKEN: {
       AUTORIZATION_URL:
         "https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize",
-      CLIENTE_ID: "1OaC8gIVEfG8WxjrB37saszNQ5ga",
+      CLIENTE_ID: "vnDhtcNeM9lEWWFd4oNvrpZxqhMa",
       RESPONSE_TYPE: "id_token token",
       SCOPE: "openid email",
       REDIRECT_URL: "https://pruebaspsisgplanmf.portaloas.udistrital.edu.co",
@@ -18,11 +18,11 @@ export const environment = {
       AUTENTICACION_MID: "https://autenticacion.portaloas.udistrital.edu.co/apioas/autenticacion_mid/v1/token/userRol",
     },
     parcels: {
-      "@udistrital/root-config": "https://psisgplanmf.portaloas.udistrital.edu.co/udistrital-root-config.js",
-      "@udistrital/core-mf": "https://coreclientes.portaloas.udistrital.edu.co/main.js",
+      "@udistrital/root-config": "https://pruebaspsisgplanmf.portaloas.udistrital.edu.co/udistrital-root-config.js",
+      "@udistrital/core-mf": "https://pruebascoreclientes.portaloas.udistrital.edu.co/main.js",
       "@udistrital/planeacion-formulacion-mf": "",
       "@udistrital/planeacion-seguimiento-mf": "",
-      "@udistrital/planeacion-utilidades-mf": "https://psisgplanutilidadesmf.portaloas.udistrital.edu.co/main.js",
+      "@udistrital/planeacion-utilidades-mf": "https://pruebaspsisgplanutilidadesmf.portaloas.udistrital.edu.co/main.js",
       "@udistrital/planeacion-construccion-mf": "",
       "@udistrital/planeacion-pendientes-mf": "",
     }
