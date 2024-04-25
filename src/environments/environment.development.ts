@@ -9,7 +9,7 @@ export const environment = {
     TOKEN: {
       AUTORIZATION_URL:
         "https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize",
-      CLIENTE_ID: "1OaC8gIVEfG8WxjrB37saszNQ5ga",
+      CLIENTE_ID: "vnDhtcNeM9lEWWFd4oNvrpZxqhMa",
       RESPONSE_TYPE: "id_token token",
       SCOPE: "openid email",
       REDIRECT_URL: "https://pruebaspsisgplanmf.portaloas.udistrital.edu.co",
