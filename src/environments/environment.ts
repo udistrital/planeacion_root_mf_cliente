@@ -2,13 +2,18 @@ export const environment = {
     production: false,
     entorno: "test",
     autenticacion: true,
-    notificaciones: false,
+    notificaciones: true,
     menuApps: false,
     appname: "PLANEACION",
     appMenu: "PLANEACION",
 
     // Notificaciones
-    NOTIFICACION_MID_SERVICE: "https://autenticacion.portaloas.udistrital.edu.co/apioas/notificacion_mid/v1/",
+    COLAS_NOTIFICACIONES: {
+      PLANEACION: 'JefePlaneacion',
+      JEFE_DEPENDENCIA: 'JefeUnidad',
+      ASISTENTE_DEPENDENCIA: 'AsistenteUnidad',
+      ASISTENTE_PLANEACION: 'AsistentePlaneacion'
+    },
 
     TOKEN: {
       AUTORIZATION_URL: "https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize",
