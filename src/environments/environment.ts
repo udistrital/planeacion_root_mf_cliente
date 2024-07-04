@@ -20,10 +20,10 @@ export const environment = {
     parcels: {
       "@udistrital/root-config": "https://pruebaspsisgplanmf.portaloas.udistrital.edu.co/udistrital-root-config.js",
       "@udistrital/core-mf": "https://pruebascoreclientes.portaloas.udistrital.edu.co/main.js",
-      "@udistrital/planeacion-formulacion-mf": "",
-      "@udistrital/planeacion-seguimiento-mf": "",
+      "@udistrital/planeacion-formulacion-mf": "https://pruebaspsisgplanformulacionmf.portaloas.udistrital.edu.co/main.js",
+      "@udistrital/planeacion-seguimiento-mf": "https://pruebaspsisgplanseguimientomf.portaloas.udistrital.edu.co/main.js",
       "@udistrital/planeacion-utilidades-mf": "https://pruebaspsisgplanutilidadesmf.portaloas.udistrital.edu.co/main.js",
-      "@udistrital/planeacion-construccion-mf": "",
-      "@udistrital/planeacion-pendientes-mf": "",
+      "@udistrital/planeacion-construccion-mf": "https://pruebaspsisgplanconstruccionsmf.portaloas.udistrital.edu.co/main.js",
+      "@udistrital/planeacion-pendientes-mf": "https://pruebaspsisgplanpendientesmf.portaloas.udistrital.edu.co/main.js",
     }
   };
