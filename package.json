@@ -47,4 +47,3 @@
     "single-spa-layout": "^1.6.0"
   },
   "types": "dist/udistrital-root-config.d.ts"
-}
