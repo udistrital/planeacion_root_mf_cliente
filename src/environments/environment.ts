@@ -14,7 +14,7 @@ export const environment = {
     ASISTENTE_DEPENDENCIA: 'AsistenteUnidad',
     ASISTENTE_PLANEACION: 'AsistentePlaneacion'
   },
-
+      
   TOKEN: {
     AUTORIZATION_URL: "https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize",
     CLIENTE_ID: "e36v1MPQk2jbz9KM4SmKhk8Cyw0a",
