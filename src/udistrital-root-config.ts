@@ -5,21 +5,9 @@ import {
   constructLayoutEngine,
 } from "single-spa-layout";
 import microfrontendLayout from "./microfrontend-layout.html";
-import "./assets/styles/layout.css"
+import { environment } from "./environments/environment";
+import "./assets/styles/layout.css";
 
-let environment;
-
-declare var isProd: boolean | undefined;
-declare var isDev: boolean | undefined;
-//declare var isLocal : boolean | undefined;
-
-if (isProd) {
-  environment = require("./environments/environment.production");
-} else if (isDev) {
-  environment = require("./environments/environment.development");
-} else {
-  environment = require("./environments/environment");
-}
 
 const data = {
   props: environment,

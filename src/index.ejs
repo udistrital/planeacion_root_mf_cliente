@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
-  <meta http-equiv="expires" content="0">
-  <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SISGPLAN Cliente</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <!--
     Remove this if you only support browsers that support async/await.
@@ -20,15 +18,7 @@
     This CSP allows any SSL-enabled host and for arbitrary eval(), but you should limit these directives further to increase your app's security.
     Learn more about CSP policies at https://content-security-policy.com/#directive
   -->
-  <meta http-equiv="Content-Security-Policy" 
-  content="
-      default-src 'self' https: localhost:* *.portaloas.udistrital.edu.co; 
-      script-src 'unsafe-inline' 'unsafe-eval' https: localhost:* *.portaloas.udistrital.edu.co; 
-      connect-src https: localhost:* ws://localhost:* *.portaloas.udistrital.edu.co; 
-      style-src 'unsafe-inline' https: *.portaloas.udistrital.edu.co; 
-      object-src 'none';
-  "/>
-
+  <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">-->
   <meta name="importmap-type" content="systemjs-importmap" />
   <!-- If you wish to turn off import-map-overrides for specific environments (prod), uncomment the line below -->
   <!-- More info at https://github.com/joeldenning/import-map-overrides/blob/master/docs/configuration.md#domain-list -->
@@ -45,7 +35,9 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "rxjs": "https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.4.0/rxjs.umd.min.js",
+        "@udistrital/planeacion-utilidades-module":"//localhost:4208/udistrital-planeacion-utilidades-module.js"
       }
     }
   </script>
@@ -54,31 +46,23 @@
   <!-- Add your organization's prod import map URL to this script's src  -->
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
+  <% if (isLocal) { %>
   <script type="systemjs-importmap">
-      {
-        "imports": {
-          <% if (isProd) { %>
-            <% const { environment } = require('./environments/environment.production.ts'); %>
-            <% const parcelsKeys = Object.keys(environment.parcels); %>
-            <% for (let i = 0; i < parcelsKeys.length; i++) { %>
-              "<%= parcelsKeys[i] %>": "<%= environment.parcels[parcelsKeys[i]] %>"<%= i < parcelsKeys.length - 1 ? ',' : '' %>
-            <% } %>
-          <% } else if (isDev) {%>
-            <% const { environment } = require('./environments/environment.development.ts'); %>
-            <% const parcelsKeys = Object.keys(environment.parcels); %>
-            <% for (let i = 0; i < parcelsKeys.length; i++) { %>
-              "<%= parcelsKeys[i] %>": "<%= environment.parcels[parcelsKeys[i]] %>"<%= i < parcelsKeys.length - 1 ? ',' : '' %>
-            <% } %>
-          <% } else {%>
-            <% const { environment } = require('./environments/environment.ts'); %>
-            <% const parcelsKeys = Object.keys(environment.parcels); %>
-            <% for (let i = 0; i < parcelsKeys.length; i++) { %>
-              "<%= parcelsKeys[i] %>": "<%= environment.parcels[parcelsKeys[i]] %>"<%= i < parcelsKeys.length - 1 ? ',' : '' %>
-            <% } %>
-          <% } %>
-        }
+    {
+      "imports": {
+        "@udistrital/root-config": "https://pruebaspsisgplanmf.portaloas.udistrital.edu.co/udistrital-root-config.js",
+        "@udistrital/core-mf":"https://pruebassgamicroclientes.portaloas.udistrital.edu.co/main.js",
+        "@udistrital/planeacion-formulacion-mf":"https://pruebaspsisgplanformulacionmf.portaloas.udistrital.edu.co/main.js",
+        "@udistrital/planeacion-pendientes-mf":"https://pruebaspsisgplanpendientesmf.portaloas.udistrital.edu.co/main.js",
+        "@udistrital/planeacion-seguimiento-mf":"https://pruebaspsisgplanseguimientomf.portaloas.udistrital.edu.co/main.js",
+        "@udistrital/planeacion-construccion-mf":"https://pruebaspsisgplanconstruccionsmf.portaloas.udistrital.edu.co/main.js",
+        "@udistrital/planeacion-macroplanes-mf":"https://pruebaspsisgplanmacroplanesmf.portaloas.udistrital.edu.co/main.js",
+        "@udistrital/planeacion-evaluacion-mf":"https://pruebaspsisgplanevaluacionmf.portaloas.udistrital.edu.co/main.js",
+        "@udistrital/planeacion-utilidades-mf":"https://pruebaspsisgplanutilidadesmf.portaloas.udistrital.edu.co/main.js"
       }
-    </script>
+    }
+  </script>
+  <% } %>
 
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
@@ -94,6 +78,8 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
+  <link rel="stylesheet" href="https://pruebasassets.portaloas.udistrital.edu.co/gaia-style.css">
+  <link rel="stylesheet" href="https://pruebasassets.portaloas.udistrital.edu.co/oas.css">
 
 </head>
 <body>
