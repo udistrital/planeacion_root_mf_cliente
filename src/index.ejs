@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SISGPLAN Cliente</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -46,23 +49,31 @@
   <!-- Add your organization's prod import map URL to this script's src  -->
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
-  <% if (isLocal) { %>
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@udistrital/root-config": "https://pruebaspsisgplanmf.portaloas.udistrital.edu.co/udistrital-root-config.js",
-        "@udistrital/core-mf":"https://pruebassgamicroclientes.portaloas.udistrital.edu.co/main.js",
-        "@udistrital/planeacion-formulacion-mf":"https://pruebaspsisgplanformulacionmf.portaloas.udistrital.edu.co/main.js",
-        "@udistrital/planeacion-pendientes-mf":"https://pruebaspsisgplanpendientesmf.portaloas.udistrital.edu.co/main.js",
-        "@udistrital/planeacion-seguimiento-mf":"https://pruebaspsisgplanseguimientomf.portaloas.udistrital.edu.co/main.js",
-        "@udistrital/planeacion-construccion-mf":"https://pruebaspsisgplanconstruccionsmf.portaloas.udistrital.edu.co/main.js",
-        "@udistrital/planeacion-macroplanes-mf":"https://pruebaspsisgplanmacroplanesmf.portaloas.udistrital.edu.co/main.js",
-        "@udistrital/planeacion-evaluacion-mf":"https://pruebaspsisgplanevaluacionmf.portaloas.udistrital.edu.co/main.js",
-        "@udistrital/planeacion-utilidades-mf":"https://pruebaspsisgplanutilidadesmf.portaloas.udistrital.edu.co/main.js"
+        <% if (isProd) { %>
+          <% const { environment } = require('./environments/environment.production.ts'); %>
+          <% const parcelsKeys = Object.keys(environment.parcels); %>
+          <% for (let i = 0; i < parcelsKeys.length; i++) { %>
+            "<%= parcelsKeys[i] %>": "<%= environment.parcels[parcelsKeys[i]] %>"<%= i < parcelsKeys.length - 1 ? ',' : '' %>
+          <% } %>
+        <% } else if (isDev) {%>
+          <% const { environment } = require('./environments/environment.development.ts'); %>
+          <% const parcelsKeys = Object.keys(environment.parcels); %>
+          <% for (let i = 0; i < parcelsKeys.length; i++) { %>
+            "<%= parcelsKeys[i] %>": "<%= environment.parcels[parcelsKeys[i]] %>"<%= i < parcelsKeys.length - 1 ? ',' : '' %>
+          <% } %>
+        <% } else {%>
+          <% const { environment } = require('./environments/environment.ts'); %>
+          <% const parcelsKeys = Object.keys(environment.parcels); %>
+          <% for (let i = 0; i < parcelsKeys.length; i++) { %>
+            "<%= parcelsKeys[i] %>": "<%= environment.parcels[parcelsKeys[i]] %>"<%= i < parcelsKeys.length - 1 ? ',' : '' %>
+          <% } %>
+        <% } %>
       }
     }
   </script>
-  <% } %>
 
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded

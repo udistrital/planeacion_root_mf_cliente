@@ -9,6 +9,7 @@
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
     "build:types": "tsc",
+    "build:prod": "webpack --progress --mode production --no-devtool --env isProd",
     "build:test": "webpack --progress --mode production --no-devtool --env isDev"
   },
   "devDependencies": {
@@ -46,4 +47,3 @@
     "single-spa-layout": "^1.6.0"
   },
   "types": "dist/udistrital-root-config.d.ts"
-}
