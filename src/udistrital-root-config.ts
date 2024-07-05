@@ -8,10 +8,9 @@ import microfrontendLayout from "./microfrontend-layout.html";
 import { environment } from "./environments/environment";
 import "./assets/styles/layout.css";
 
+
 const data = {
-  props: {
-    environment: environment,
-  },
+  props: environment,
   loaders: {},
 };
 
