@@ -28,7 +28,7 @@ export const environment = {
 
   parcels: {
     "@udistrital/root-config": "https://pruebaspsisgplanmf.portaloas.udistrital.edu.co/udistrital-root-config.js",
-    "@udistrital/core-mf": "https://pruebassgamicroclientes.portaloas.udistrital.edu.co/main.js",
+    "@udistrital/core-mf": "https://pruebascoreclientes.portaloas.udistrital.edu.co/main.js",
     "@udistrital/planeacion-formulacion-mf": "https://pruebaspsisgplanformulacionmf.portaloas.udistrital.edu.co/main.js",
     "@udistrital/planeacion-pendientes-mf": "https://pruebaspsisgplanpendientesmf.portaloas.udistrital.edu.co/main.js",
     "@udistrital/planeacion-seguimiento-mf": "https://pruebaspsisgplanseguimientomf.portaloas.udistrital.edu.co/main.js",
