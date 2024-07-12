@@ -5,7 +5,7 @@ export const environment = {
   notificaciones: true,
   menuApps: false,
   appname: "PLANEACION",
-  appMenu: "PLANEACION",
+  appMenu: "PLANEACION_V2",
 
   // Notificaciones
   COLAS_NOTIFICACIONES: {
