@@ -6,7 +6,7 @@ export const environment = {
   menuApps: false,
   appname: "PLANEACION",
   appMenu: "PLANEACION_V2",
-    
+  
   TOKEN: {
     AUTORIZATION_URL: "https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize",
     CLIENTE_ID: "e36v1MPQk2jbz9KM4SmKhk8Cyw0a",
