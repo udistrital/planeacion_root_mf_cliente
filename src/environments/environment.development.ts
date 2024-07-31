@@ -36,6 +36,7 @@ export const environment = {
     "@udistrital/planeacion-macroplanes-mf": "https://pruebaspsisgplanmacroplanesmf.portaloas.udistrital.edu.co/main.js",
     "@udistrital/planeacion-evaluacion-mf": "https://pruebaspsisgplanevaluacionmf.portaloas.udistrital.edu.co/main.js",
     "@udistrital/planeacion-utilidades-mf": "https://pruebaspsisgplanutilidadesmf.portaloas.udistrital.edu.co/main.js",
-    "@udistrital/planeacion-reportes-mf": "https://pruebaspsisgplanreportesmf.portaloas.udistrital.edu.co/main.js"
+    "@udistrital/planeacion-reportes-mf": "https://pruebaspsisgplanreportesmf.portaloas.udistrital.edu.co/main.js",
+    "@udistrital/planeacion-utilidades-module":"https://pruebaspsisgplanutilitymf.portaloas.udistrital.edu.co/udistrital-planeacion-utilidades-module.js"
   },
 };
