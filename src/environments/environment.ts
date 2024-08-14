@@ -7,14 +7,6 @@ export const environment = {
   appname: "PLANEACION",
   appMenu: "PLANEACION_V2",
 
-  // Notificaciones
-  COLAS_NOTIFICACIONES: {
-    PLANEACION: 'JefePlaneacion',
-    JEFE_DEPENDENCIA: 'JefeUnidad',
-    ASISTENTE_DEPENDENCIA: 'AsistenteUnidad',
-    ASISTENTE_PLANEACION: 'AsistentePlaneacion'
-  },
-      
   TOKEN: {
     AUTORIZATION_URL: "https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize",
     CLIENTE_ID: "e36v1MPQk2jbz9KM4SmKhk8Cyw0a",
